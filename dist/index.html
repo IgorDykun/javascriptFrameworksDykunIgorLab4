@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Система управління бібліотекою</title>
+    <link rel="stylesheet" href="../libs/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Система управління бібліотекою</h1>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h2>Додати книгу</h2>
+          <form id="addBookForm">
+            <div class="mb-3">
+              <label for="bookId" class="form-label">ID книги</label>
+              <input type="text" class="form-control" id="bookId" required />
+            </div>
+            <div class="mb-3">
+              <label for="bookTitle" class="form-label">Назва книги</label>
+              <input type="text" class="form-control" id="bookTitle" required />
+            </div>
+            <div class="mb-3">
+              <label for="bookAuthor" class="form-label">Автор книги</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bookAuthor"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="bookYear" class="form-label">Рік видання</label>
+              <input type="text" class="form-control" id="bookYear" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Додати книгу</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Додати користувача</h2>
+          <form id="addUserForm">
+            <div class="mb-3">
+              <label for="userId" class="form-label">ID користувача</label>
+              <input type="text" class="form-control" id="userId" required />
+            </div>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Ім'я користувача</label>
+              <input type="text" class="form-control" id="userName" required />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Додати користувача
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2>Список книг</h2>
+          <ul id="bookList" class="list-group"></ul>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2>Список користувачів</h2>
+          <ul id="userList" class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
